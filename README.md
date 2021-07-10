@@ -22,7 +22,7 @@ Para executar este projeto, basta clona-lo, entrar na raiz do projeto e seguir a
 > composer update 
 
 2) Como administrador crie o container do Docker responsável por inicializar o Mysql
-> docker-composer up -d
+> docker-compose up -d
 
 3) Crie a tabela de usuário executando as migrations
 > php artisan migrate
