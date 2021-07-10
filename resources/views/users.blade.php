@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
         <link href="<?php echo asset('js/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
         <link href="<?php echo asset('js/datatables/datatables.min.css') ?>" rel="stylesheet">
         <link href="<?php echo asset('js/datatables/plugins/bootstrap/datatables.bootstrap.css') ?>" rel="stylesheet">
@@ -28,7 +27,6 @@
             <div style="text-align: center; color: #555;">
                 <h1>CRMALL - Processo Seletivo</h1>
             </div>
-
 
             <div>
                 <button class="btn btn-primary" onclick="location.href='http://localhost:8000/newuser'">Novo</button>
@@ -60,51 +58,6 @@
         <script type="text/javascript" src="<?php echo asset('js/bootstrap/js/bootstrap.min.js') ?>"></script>
         <script type="text/javascript" src="<?php echo asset('js/datatables/datatables.min.js') ?>"></script>
         <script type="text/javascript" src="<?php echo asset('js/datatables/plugins/bootstrap/datatables.bootstrap.js') ?>"></script>
-
-        <script>
-            $(function() {
-                $("#tbl_01").dataTable({
-                    dom: 'Blfrtip',
-                    info:     true,
-                    paging:   false,
-                    pageLength: 25,
-                    lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
-                    ordering: false,
-                    order: [[ 0, "desc" ]],
-                    serverMethod: 'get',
-                    ajax: {
-                        url: "http://localhost:8000/api/users"
-                    },
-                    buttons: [],
-                    language: {
-                        url: "<?php echo asset('js/datatables/Portuguese-Brasil.json') ?>"
-                    },
-                    initComplete: function() {}
-                });
-
-
-                $(document).on('click', '.btn-editar', function(e) {
-                    let id = $(this).data('id');
-                    window.location = 'http://localhost:8000/newuser?id='+id;
-                });
-
-                $(document).on('click', '.btn-excluir', function(e) {
-                    let id = $(this).data('id');
-
-                    $.ajax({
-                        type: 'DELETE',
-                        url: `http://localhost:8000/api/users/${id}`,
-                        async: true,
-                        dataType: 'json',
-                        beforeSend: function () {},
-                        success: function (data) {
-                            $("#tbl_01").DataTable().ajax.reload();
-                        },
-                        complete: function() {},
-                        fail: function() {}
-                    });
-                });
-            });
-        </script>
+        <script type="text/javascript" src="<?php echo asset('js/users.js') ?>"></script>
     </body>
 </html>
