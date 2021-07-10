@@ -35,24 +35,24 @@ Para executar este projeto, basta clona-lo, entrar na raiz do projeto e seguir a
 
 
 
-## Endpoints (Rotas)
+## API Rest - Endpoints (Rotas)
 
 Esta aplicação possui apenas 5 endpoints definidos, são eles:
 
 1) Exibir todos os usuários
-> GET [http://localhost:8000]
+> GET [http://localhost:8000/api/users/]
 
 2) Mostra os dados de um usuário específico
-> GET [http://localhost:8000/{id}]
+> GET [http://localhost:8000/api/users/{id}]
 
 3) Criar um usuário
-> POST [http://localhost:8000/]
+> POST [http://localhost:8000/api/users/]
 
 4) Atualizar as informações de um usuário
-> UPDATE [http://localhost:8000/{id}]
+> UPDATE [http://localhost:8000/api/users/{id}]
 
 5) Excluir um usuário
-> DELETE [http://localhost:8000/{id}]
+> DELETE [http://localhost:8000/api/users/{id}]
 
 
 ## Licença

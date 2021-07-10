@@ -12,7 +12,7 @@ $("#tbl_01").dataTable({
     },
     buttons: [],
     language: {
-        url: "<?php echo asset('js/datatables/Portuguese-Brasil.json') ?>"
+        url: "/js/datatables/Portuguese-Brasil.json"
     },
     initComplete: function() {}
 });

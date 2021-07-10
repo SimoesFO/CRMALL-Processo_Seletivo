@@ -6,6 +6,11 @@ $("#nascimento").datepicker({
     language: 'pt-BR'
 });
 
+$("#btn-voltar").on("click", function(e) {
+    e.preventDefault();
+    window.location = 'http://localhost:8000';
+});
+
 $("#cep").on('change', function() {
     let cep = $(this).val();
 

@@ -100,7 +100,7 @@ $id = isset( $_GET['id'] ) ? $_GET['id'] : '';
                         </div>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
-                        <button class="btn btn-default" id="btn-voltar" onclick="history.back()">Voltar</button>
+                        <button class="btn btn-default" id="btn-voltar">Voltar</button>
                         <button class="btn btn-primary" id="btn-salvar">Salvar</button>
                     </div>
                 </form>
